@@ -1,0 +1,10 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/zhuye",
+    "pages/zhuce",
+    "pages/renwu",
+    "pages/addPlant",
+    "pages/shezhi"
+  ]
+}
