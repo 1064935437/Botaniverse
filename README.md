@@ -1,2 +1,2 @@
 # Botaniverse
-小组协作完成植物辅助种植app的开发
+基于鸿蒙系统ArkTS语言的植物种植辅助app
