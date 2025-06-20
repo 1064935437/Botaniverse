@@ -1,0 +1,828 @@
+Ôr@Ÿªassertions¤code´customTransformCache¬dependencies¢id¤meta±moduleSideEffects¬originalCode±originalSourcemap«resolvedIds®sourcemapChainµsyntheticNamedExportsµtransformDependencies®transformFiles¨cacheAstÔrAÚJ"if (!("finalizeConstruction" in ViewPU.prototype)) {
+    Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
+}
+import router from '@ohos.router';
+class AddPlantPage extends ViewPU {
+    constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
+        super(parent, __localStorage, elmtId, extraInfo);
+        if (typeof paramsLambda === "function") {
+            this.paramsGenerator_ = paramsLambda;
+        }
+        this.__plantImage = new ObservedPropertySimplePU('', this, "plantImage");
+        this.__plantName = new ObservedPropertySimplePU('', this, "plantName");
+        this.__plantType = new ObservedPropertySimplePU('', this, "plantType");
+        this.__growthDays = new ObservedPropertySimplePU(7, this, "growthDays");
+        this.__wateringFrequency = new ObservedPropertySimplePU('æ¯å¤©ä¸€æ¬¡', this, "wateringFrequency");
+        this.__lightRequirement = new ObservedPropertySimplePU('å……è¶³é˜³å…‰', this, "lightRequirement");
+        this.__notes = new ObservedPropertySimplePU(''
+        // æ·»åŠ ä»»åŠ¡ç›¸å…³çŠ¶æ€å˜é‡
+        , this, "notes");
+        this.__taskTitle = new ObservedPropertySimplePU('', this, "taskTitle");
+        this.__taskTime = new ObservedPropertySimplePU('', this, "taskTime");
+        this.setInitiallyProvidedValue(params);
+        this.finalizeConstruction();
+    }
+    setInitiallyProvidedValue(params) {
+        if (params.plantImage !== undefined) {
+            this.plantImage = params.plantImage;
+        }
+        if (params.plantName !== undefined) {
+            this.plantName = params.plantName;
+        }
+        if (params.plantType !== undefined) {
+            this.plantType = params.plantType;
+        }
+        if (params.growthDays !== undefined) {
+            this.growthDays = params.growthDays;
+        }
+        if (params.wateringFrequency !== undefined) {
+            this.wateringFrequency = params.wateringFrequency;
+        }
+        if (params.lightRequirement !== undefined) {
+            this.lightRequirement = params.lightRequirement;
+        }
+        if (params.notes !== undefined) {
+            this.notes = params.notes;
+        }
+        if (params.taskTitle !== undefined) {
+            this.taskTitle = params.taskTitle;
+        }
+        if (params.taskTime !== undefined) {
+            this.taskTime = params.taskTime;
+        }
+    }
+    updateStateVars(params) {
+    }
+    purgeVariableDependenciesOnElmtId(rmElmtId) {
+        this.__plantImage.purgeDependencyOnElmtId(rmElmtId);
+        this.__plantName.purgeDependencyOnElmtId(rmElmtId);
+        this.__plantType.purgeDependencyOnElmtId(rmElmtId);
+        this.__growthDays.purgeDependencyOnElmtId(rmElmtId);
+        this.__wateringFrequency.purgeDependencyOnElmtId(rmElmtId);
+        this.__lightRequirement.purgeDependencyOnElmtId(rmElmtId);
+        this.__notes.purgeDependencyOnElmtId(rmElmtId);
+        this.__taskTitle.purgeDependencyOnElmtId(rmElmtId);
+        this.__taskTime.purgeDependencyOnElmtId(rmElmtId);
+    }
+    aboutToBeDeleted() {
+        this.__plantImage.aboutToBeDeleted();
+        this.__plantName.aboutToBeDeleted();
+        this.__plantType.aboutToBeDeleted();
+        this.__growthDays.aboutToBeDeleted();
+        this.__wateringFrequency.aboutToBeDeleted();
+        this.__lightRequirement.aboutToBeDeleted();
+        this.__notes.aboutToBeDeleted();
+        this.__taskTitle.aboutToBeDeleted();
+        this.__taskTime.aboutToBeDeleted();
+        SubscriberManager.Get().delete(this.id__());
+        this.aboutToBeDeletedInternal();
+    }
+    get plantImage() {
+        return this.__plantImage.get();
+    }
+    set plantImage(newValue) {
+        this.__plantImage.set(newValue);
+    }
+    get plantName() {
+        return this.__plantName.get();
+    }
+    set plantName(newValue) {
+        this.__plantName.set(newValue);
+    }
+    get plantType() {
+        return this.__plantType.get();
+    }
+    set plantType(newValue) {
+        this.__plantType.set(newValue);
+    }
+    get growthDays() {
+        return this.__growthDays.get();
+    }
+    set growthDays(newValue) {
+        this.__growthDays.set(newValue);
+    }
+    get wateringFrequency() {
+        return this.__wateringFrequency.get();
+    }
+    set wateringFrequency(newValue) {
+        this.__wateringFrequency.set(newValue);
+    }
+    get lightRequirement() {
+        return this.__lightRequirement.get();
+    }
+    set lightRequirement(newValue) {
+        this.__lightRequirement.set(newValue);
+    }
+    get notes() {
+        return this.__notes.get();
+    }
+    set notes(newValue) {
+        this.__notes.set(newValue);
+    }
+    get taskTitle() {
+        return this.__taskTitle.get();
+    }
+    set taskTitle(newValue) {
+        this.__taskTitle.set(newValue);
+    }
+    get taskTime() {
+        return this.__taskTime.get();
+    }
+    set taskTime(newValue) {
+        this.__taskTime.set(newValue);
+    }
+    initialRender() {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+            Column.width('100%');
+            Column.height('100%');
+            Column.backgroundColor('#ffffff');
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // é¡¶éƒ¨æ 
+            Row.create();
+            // é¡¶éƒ¨æ 
+            Row.width('100%');
+            // é¡¶éƒ¨æ 
+            Row.padding({
+                left: 16,
+                right: 16,
+                top: 8,
+                bottom: 8
+            });
+            // é¡¶éƒ¨æ 
+            Row.justifyContent(FlexAlign.Start);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 16777233, "type": 20000, params: [], "bundleName": "com.example.myapplication", "moduleName": "entry" });
+            Image.width(24);
+            Image.height(24);
+            Image.onClick(() => {
+                const params = router.getParams();
+                if (params?.from === 'task') {
+                    router.pushUrl({ url: 'pages/renwu' });
+                }
+                else {
+                    router.back();
+                }
+            });
+        }, Image);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('æ·»åŠ æ¤ç‰©');
+            Text.fontSize(20);
+            Text.fontWeight(FontWeight.Medium);
+        }, Text);
+        Text.pop();
+        // é¡¶éƒ¨æ 
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // å°†æ•´ä¸ªå†…å®¹åŒºåŸŸæ”¾å…¥æ»šåŠ¨å®¹å™¨
+            Scroll.create();
+            // å°†æ•´ä¸ªå†…å®¹åŒºåŸŸæ”¾å…¥æ»šåŠ¨å®¹å™¨
+            Scroll.scrollable(ScrollDirection.Vertical);
+            // å°†æ•´ä¸ªå†…å®¹åŒºåŸŸæ”¾å…¥æ»šåŠ¨å®¹å™¨
+            Scroll.edgeEffect(EdgeEffect.Spring);
+            // å°†æ•´ä¸ªå†…å®¹åŒºåŸŸæ”¾å…¥æ»šåŠ¨å®¹å™¨
+            Scroll.layoutWeight(1);
+        }, Scroll);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+            Column.padding(16);
+            Column.width('100%');
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+            Column.create();
+            // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+            Column.width('100%');
+            // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+            Column.height(200);
+            // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+            Column.backgroundColor('#f3f4f6');
+            // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+            Column.borderRadius(8);
+            // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+            Column.margin({ top: 16 });
+            // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+            Column.onClick(() => {
+                router.pushUrl({
+                    url: 'pages/Camera',
+                    params: {
+                        from: 'addPlant'
+                    }
+                });
+            });
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            If.create();
+            if (this.plantImage === '') {
+                this.ifElseBranchUpdateFunction(0, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Column.create();
+                        Column.width('100%');
+                        Column.height('100%');
+                        Column.justifyContent(FlexAlign.Center);
+                        Column.alignItems(HorizontalAlign.Center);
+                    }, Column);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Image.create({ "id": 16777235, "type": 20000, params: [], "bundleName": "com.example.myapplication", "moduleName": "entry" });
+                        Image.width(40);
+                        Image.height(40);
+                    }, Image);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create('ç‚¹å‡»ä¸Šä¼ æ¤ç‰©å›¾ç‰‡');
+                        Text.fontSize(14);
+                        Text.margin({ top: 8 });
+                        Text.fontColor('#666666');
+                    }, Text);
+                    Text.pop();
+                    Column.pop();
+                });
+            }
+            else {
+                this.ifElseBranchUpdateFunction(1, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Image.create(this.plantImage);
+                        Image.width('100%');
+                        Image.height(200);
+                        Image.borderRadius(8);
+                        Image.objectFit(ImageFit.Cover);
+                    }, Image);
+                });
+            }
+        }, If);
+        If.pop();
+        // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+        Column.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // æ¤ç‰©ä¿¡æ¯è¡¨å•
+            TextInput.create({ placeholder: 'è¯·è¾“å…¥æ¤ç‰©åç§°' });
+            // æ¤ç‰©ä¿¡æ¯è¡¨å•
+            TextInput.width('100%');
+            // æ¤ç‰©ä¿¡æ¯è¡¨å•
+            TextInput.height(48);
+            // æ¤ç‰©ä¿¡æ¯è¡¨å•
+            TextInput.margin({ top: 16 });
+            // æ¤ç‰©ä¿¡æ¯è¡¨å•
+            TextInput.onChange((value) => {
+                this.plantName = value;
+            });
+        }, TextInput);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Select.create([
+                { value: 'å¤šè‚‰æ¤ç‰©' },
+                { value: 'è§‚å¶æ¤ç‰©' },
+                { value: 'è‰æœ¬æ¤ç‰©' }
+            ]);
+            Select.width('100%');
+            Select.margin({ top: 16 });
+            Select.selected(0);
+            Select.onSelect((index) => {
+                this.plantType = index.toString();
+            });
+        }, Select);
+        Select.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // ç”Ÿé•¿å‘¨æœŸæ»‘å—
+            Text.create('ç”Ÿé•¿å‘¨æœŸï¼ˆå¤©ï¼‰');
+            // ç”Ÿé•¿å‘¨æœŸæ»‘å—
+            Text.fontSize(14);
+            // ç”Ÿé•¿å‘¨æœŸæ»‘å—
+            Text.margin({ top: 16 });
+        }, Text);
+        // ç”Ÿé•¿å‘¨æœŸæ»‘å—
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Slider.create({
+                min: 7,
+                max: 365,
+                step: 1,
+                value: this.growthDays
+            });
+            Slider.width('100%');
+            Slider.onChange((value) => {
+                this.growthDays = value;
+            });
+        }, Slider);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Row.create();
+            Row.width('100%');
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('7å¤©');
+            Text.fontSize(12);
+            Text.fontColor('#666666');
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('365å¤©');
+            Text.fontSize(12);
+            Text.fontColor('#666666');
+        }, Text);
+        Text.pop();
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // æµ‡æ°´é¢‘çŽ‡
+            Row.create();
+            // æµ‡æ°´é¢‘çŽ‡
+            Row.width('100%');
+            // æµ‡æ°´é¢‘çŽ‡
+            Row.margin({ top: 16 });
+            // æµ‡æ°´é¢‘çŽ‡
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Radio.create({ value: 'æ¯å¤©ä¸€æ¬¡', group: 'watering' });
+            Radio.checked(true);
+            Radio.onChange((value) => {
+                if (value)
+                    this.wateringFrequency = 'æ¯å¤©ä¸€æ¬¡';
+            });
+        }, Radio);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('æ¯å¤©ä¸€æ¬¡');
+            Text.fontSize(14);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Radio.create({ value: 'æ¯å‘¨2-3æ¬¡', group: 'watering' });
+            Radio.onChange((value) => {
+                if (value)
+                    this.wateringFrequency = 'æ¯å‘¨2-3æ¬¡';
+            });
+        }, Radio);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('æ¯å‘¨2-3æ¬¡');
+            Text.fontSize(14);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Radio.create({ value: 'æ¯å‘¨ä¸€æ¬¡', group: 'watering' });
+            Radio.onChange((value) => {
+                if (value)
+                    this.wateringFrequency = 'æ¯å‘¨ä¸€æ¬¡';
+            });
+        }, Radio);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('æ¯å‘¨ä¸€æ¬¡');
+            Text.fontSize(14);
+        }, Text);
+        Text.pop();
+        // æµ‡æ°´é¢‘çŽ‡
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // å…‰ç…§éœ€æ±‚
+            Row.create();
+            // å…‰ç…§éœ€æ±‚
+            Row.width('100%');
+            // å…‰ç…§éœ€æ±‚
+            Row.margin({ top: 16 });
+            // å…‰ç…§éœ€æ±‚
+            Row.justifyContent(FlexAlign.SpaceBetween);
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Radio.create({ value: 'å……è¶³é˜³å…‰', group: 'light' });
+            Radio.checked(true);
+            Radio.onChange((value) => {
+                if (value)
+                    this.lightRequirement = 'å……è¶³é˜³å…‰';
+            });
+        }, Radio);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('å……è¶³é˜³å…‰');
+            Text.fontSize(14);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Radio.create({ value: 'æ•£å°„å…‰', group: 'light' });
+            Radio.onChange((value) => {
+                if (value)
+                    this.lightRequirement = 'æ•£å°„å…‰';
+            });
+        }, Radio);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('æ•£å°„å…‰');
+            Text.fontSize(14);
+        }, Text);
+        Text.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Radio.create({ value: 'é˜´å‡‰', group: 'light' });
+            Radio.onChange((value) => {
+                if (value)
+                    this.lightRequirement = 'é˜´å‡‰';
+            });
+        }, Radio);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create('é˜´å‡‰');
+            Text.fontSize(14);
+        }, Text);
+        Text.pop();
+        // å…‰ç…§éœ€æ±‚
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // å¤‡æ³¨ä¿¡æ¯
+            TextArea.create({ placeholder: 'å¤‡æ³¨ä¿¡æ¯ï¼ˆé€‰å¡«ï¼‰' });
+            // å¤‡æ³¨ä¿¡æ¯
+            TextArea.width('100%');
+            // å¤‡æ³¨ä¿¡æ¯
+            TextArea.height(100);
+            // å¤‡æ³¨ä¿¡æ¯
+            TextArea.margin({ top: 16 });
+            // å¤‡æ³¨ä¿¡æ¯
+            TextArea.onChange((value) => {
+                this.notes = value;
+            });
+        }, TextArea);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // æäº¤æŒ‰é’®
+            Button.createWithLabel('ç¡®è®¤æ·»åŠ ');
+            // æäº¤æŒ‰é’®
+            Button.width('100%');
+            // æäº¤æŒ‰é’®
+            Button.height(48);
+            // æäº¤æŒ‰é’®
+            Button.margin({ top: 24, bottom: 24 });
+            // æäº¤æŒ‰é’®
+            Button.backgroundColor('#16a34a');
+            // æäº¤æŒ‰é’®
+            Button.onClick(() => {
+                // ä½¿ç”¨æŽ¥å£å®šä¹‰æž„é€ ä»»åŠ¡æ•°æ®
+                const taskData = {
+                    title: `ç»™${this.plantName}${this.wateringFrequency}æµ‡æ°´`,
+                    plant: this.plantName,
+                    time: 'ä»Šå¤© ' + new Date().getHours() + ':00',
+                    icon: { "id": 16777273, "type": 20000, params: [], "bundleName": "com.example.myapplication", "moduleName": "entry" },
+                    plantImage: this.plantImage ? this.plantImage : { "id": 16777269, "type": 20000, params: [], "bundleName": "com.example.myapplication", "moduleName": "entry" }
+                };
+                // æž„é€ ç¬¦åˆæŽ¥å£çš„è·¯ç”±å‚æ•°
+                const routerParams = {
+                    newTask: taskData
+                };
+                router.replaceUrl({
+                    url: 'pages/renwu',
+                    params: routerParams
+                });
+            });
+        }, Button);
+        // æäº¤æŒ‰é’®
+        Button.pop();
+        Column.pop();
+        // å°†æ•´ä¸ªå†…å®¹åŒºåŸŸæ”¾å…¥æ»šåŠ¨å®¹å™¨
+        Scroll.pop();
+        Column.pop();
+    }
+    rerender() {
+        this.updateDirtyElements();
+    }
+    static getEntryName() {
+        return "AddPlantPage";
+    }
+}
+registerNamedRoute(() => new AddPlantPage(undefined, {}), "", { bundleName: "com.example.myapplication", moduleName: "entry", pagePath: "pages/addPlant", pageFullPath: "entry/src/main/ets/pages/addPlant", integratedHsp: "false", moduleType: "followWithHap" });
+//# sourceMappingURL=addPlant.js.mapÂ‘Ùf hvigor_ignore_C:_Program Files_Huawei_DevEco Studio_sdk_default_openharmony_ets_api_@ohos.router.d.tsÙXC:\Users\jt\DevEcoStudioProjects\MyApplication9new\entry\src\main\ets\pages\addPlant.etsÔrBšªmoduleName±isLocalDependency¯isNodeEntryFile§pkgPath±belongProjectPath§pkgNameªpkgVersion±dependencyPkgInfo°belongModulePath¬shouldEmitJs¥entryÃÂÙ8C:\Users\jt\DevEcoStudioProjects\MyApplication9new\entryÙ2C:\Users\jt\DevEcoStudioProjects\MyApplication9new¥entry¥1.0.0Ô  Ù8C:\Users\jt\DevEcoStudioProjects\MyApplication9new\entryÃÃÚ’import router from '@ohos.router'
+
+// æ·»åŠ ä»»åŠ¡æ•°æ®æŽ¥å£
+interface TaskData {
+  title: string
+  plant: string
+  time: string
+  icon: Resource
+  plantImage: Resource | string
+}
+
+// æ·»åŠ è·¯ç”±å‚æ•°æŽ¥å£
+interface RouterParams {
+  newTask: TaskData
+}
+
+@Entry
+@Component
+struct AddPlantPage {
+  @State plantImage: string = ''
+  @State plantName: string = ''
+  @State plantType: string = ''
+  @State growthDays: number = 7
+  @State wateringFrequency: string = 'æ¯å¤©ä¸€æ¬¡'
+  @State lightRequirement: string = 'å……è¶³é˜³å…‰'
+  @State notes: string = ''
+
+  // æ·»åŠ ä»»åŠ¡ç›¸å…³çŠ¶æ€å˜é‡
+  @State taskTitle: string = ''
+  @State taskTime: string = ''
+
+  build() {
+    Column() {
+      // é¡¶éƒ¨æ 
+      Row() {
+        Image($r('app.media.back'))
+          .width(24)
+          .height(24)
+          .onClick(() => {
+            const params = router.getParams() as Record<string, string>
+            if (params?.from === 'task') {
+              router.pushUrl({ url: 'pages/renwu' })
+            } else {
+              router.back()
+            }
+          })
+        Text('æ·»åŠ æ¤ç‰©')
+          .fontSize(20)
+          .fontWeight(FontWeight.Medium)
+      }
+      .width('100%')
+      .padding({
+        left: 16,
+        right: 16,
+        top: 8,
+        bottom: 8
+      })
+      .justifyContent(FlexAlign.Start)
+
+      // å°†æ•´ä¸ªå†…å®¹åŒºåŸŸæ”¾å…¥æ»šåŠ¨å®¹å™¨
+      Scroll() {
+        Column() {
+          // å›¾ç‰‡ä¸Šä¼ åŒºåŸŸ
+          Column() {
+            if (this.plantImage === '') {
+              Column() {
+                Image($r('app.media.camera'))
+                  .width(40)
+                  .height(40)
+                Text('ç‚¹å‡»ä¸Šä¼ æ¤ç‰©å›¾ç‰‡')
+                  .fontSize(14)
+                  .margin({ top: 8 })
+                  .fontColor('#666666')
+              }
+              .width('100%')
+              .height('100%')
+              .justifyContent(FlexAlign.Center)
+              .alignItems(HorizontalAlign.Center)
+            } else {
+              Image(this.plantImage)
+                .width('100%')
+                .height(200)
+                .borderRadius(8)
+                .objectFit(ImageFit.Cover)
+            }
+          }
+          .width('100%')
+          .height(200)
+          .backgroundColor('#f3f4f6')
+          .borderRadius(8)
+          .margin({ top: 16 })
+          .onClick(() => {
+            router.pushUrl({
+              url: 'pages/Camera',
+              params: {
+                from: 'addPlant'
+              }
+            })
+          })
+
+          // æ¤ç‰©ä¿¡æ¯è¡¨å•
+          TextInput({ placeholder: 'è¯·è¾“å…¥æ¤ç‰©åç§°' })
+            .width('100%')
+            .height(48)
+            .margin({ top: 16 })
+            .onChange((value: string) => {
+              this.plantName = value
+            })
+
+          Select([
+            { value: 'å¤šè‚‰æ¤ç‰©' },
+            { value: 'è§‚å¶æ¤ç‰©' },
+            { value: 'è‰æœ¬æ¤ç‰©' }
+          ])
+            .width('100%')
+            .margin({ top: 16 })
+            .selected(0)
+            .onSelect((index: number) => {
+              this.plantType = index.toString()
+            })
+
+          // ç”Ÿé•¿å‘¨æœŸæ»‘å—
+          Text('ç”Ÿé•¿å‘¨æœŸï¼ˆå¤©ï¼‰')
+            .fontSize(14)
+            .margin({ top: 16 })
+          Slider({
+            min: 7,
+            max: 365,
+            step: 1,
+            value: this.growthDays
+          })
+            .width('100%')
+            .onChange((value: number) => {
+              this.growthDays = value
+            })
+          Row() {
+            Text('7å¤©')
+              .fontSize(12)
+              .fontColor('#666666')
+            Text('365å¤©')
+              .fontSize(12)
+              .fontColor('#666666')
+          }
+          .width('100%')
+          .justifyContent(FlexAlign.SpaceBetween)
+
+          // æµ‡æ°´é¢‘çŽ‡
+          Row() {
+            Radio({ value: 'æ¯å¤©ä¸€æ¬¡', group: 'watering' })
+              .checked(true)
+              .onChange((value: boolean) => {
+                if (value) this.wateringFrequency = 'æ¯å¤©ä¸€æ¬¡'
+              })
+            Text('æ¯å¤©ä¸€æ¬¡').fontSize(14)
+
+            Radio({ value: 'æ¯å‘¨2-3æ¬¡', group: 'watering' })
+              .onChange((value: boolean) => {
+                if (value) this.wateringFrequency = 'æ¯å‘¨2-3æ¬¡'
+              })
+            Text('æ¯å‘¨2-3æ¬¡').fontSize(14)
+
+            Radio({ value: 'æ¯å‘¨ä¸€æ¬¡', group: 'watering' })
+              .onChange((value: boolean) => {
+                if (value) this.wateringFrequency = 'æ¯å‘¨ä¸€æ¬¡'
+              })
+            Text('æ¯å‘¨ä¸€æ¬¡').fontSize(14)
+          }
+          .width('100%')
+          .margin({ top: 16 })
+          .justifyContent(FlexAlign.SpaceBetween)
+
+          // å…‰ç…§éœ€æ±‚
+          Row() {
+            Radio({ value: 'å……è¶³é˜³å…‰', group: 'light' })
+              .checked(true)
+              .onChange((value: boolean) => {
+                if (value) this.lightRequirement = 'å……è¶³é˜³å…‰'
+              })
+            Text('å……è¶³é˜³å…‰').fontSize(14)
+
+            Radio({ value: 'æ•£å°„å…‰', group: 'light' })
+              .onChange((value: boolean) => {
+                if (value) this.lightRequirement = 'æ•£å°„å…‰'
+              })
+            Text('æ•£å°„å…‰').fontSize(14)
+
+            Radio({ value: 'é˜´å‡‰', group: 'light' })
+              .onChange((value: boolean) => {
+                if (value) this.lightRequirement = 'é˜´å‡‰'
+              })
+            Text('é˜´å‡‰').fontSize(14)
+          }
+          .width('100%')
+          .margin({ top: 16 })
+          .justifyContent(FlexAlign.SpaceBetween)
+
+          // å¤‡æ³¨ä¿¡æ¯
+          TextArea({ placeholder: 'å¤‡æ³¨ä¿¡æ¯ï¼ˆé€‰å¡«ï¼‰' })
+            .width('100%')
+            .height(100)
+            .margin({ top: 16 })
+            .onChange((value: string) => {
+              this.notes = value
+            })
+
+          // æäº¤æŒ‰é’®
+          Button('ç¡®è®¤æ·»åŠ ')
+            .width('100%')
+            .height(48)
+            .margin({ top: 24, bottom: 24 })
+            .backgroundColor('#16a34a')
+            .onClick(() => {
+              // ä½¿ç”¨æŽ¥å£å®šä¹‰æž„é€ ä»»åŠ¡æ•°æ®
+              const taskData: TaskData = {
+                title: `ç»™${this.plantName}${this.wateringFrequency}æµ‡æ°´`,
+                plant: this.plantName,
+                time: 'ä»Šå¤© ' + new Date().getHours() + ':00',
+                icon: $r('app.media.water_icon'),
+                plantImage: this.plantImage ? this.plantImage : $r('app.media.succulent')
+              }
+
+              // æž„é€ ç¬¦åˆæŽ¥å£çš„è·¯ç”±å‚æ•°
+              const routerParams: RouterParams = {
+                newTask: taskData
+              }
+
+              router.replaceUrl({
+                url: 'pages/renwu',
+                params: routerParams
+              })
+            })
+        }
+        .padding(16)
+        .width('100%')
+      }
+      .scrollable(ScrollDirection.Vertical)
+      .edgeEffect(EdgeEffect.Spring)
+      .layoutWeight(1)
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#ffffff')
+  }
+}
+ÀÔrC‘¬@ohos.routerÔrD—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÃÙf hvigor_ignore_C:_Program Files_Huawei_DevEco Studio_sdk_default_openharmony_ets_api_@ohos.router.d.tsAÃªoh-resolveÂ“ÔrE–§version¤fileªsourceRoot§sources¥names¨mappings«addPlant.js ‘¬addPlant.etsÜÚ–”    ”  ”  ”  ”!  !”"  !’” ” ‘”  ’”9 ”;  ’”8 ”: ’”8 ”: ’”9 ”: ’”Ì@ %”ÌF +’”? $”ÌE *’”4 ”6 ’” ” ’”8 ”: ’”7 ”9 ‘” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ’” 	” ‘” ’”  ”  
+–”  ”  
+” Ìï” Ìï
+” Ìï” Ìï–”  ”  
+” Ìð” Ìð” Ìð”  Ìð–”  ”  
+” Ìñ”" Ìñ”# Ìñ”, Ìñ’” !” !’” "” "	’” !” !–” "” "	” 2” 2” 2” 2’” !” !•” "” "	” 3” 3” 3”” 4” 4” 4” 4”” 5” 5” 5” 5”” 6” 6” 6” 6”” 7” 7” 7” 7‘” 8’” !” !˜” "” "	” 9” 9” 9”( 9”) 9 ”. 9%’” #” #–” #” #” $” $” $” $–” #” #” %” %” %” %—” #” #” &” &” &” &” &™” '” '” '” '”% '!”& '"”/ '+”1 'ÌG”2 'ÌG˜” (” (” (” (”  (”% (!”+ ('”- ()œ” )” )” )”" )”# )”% )”( )"”* )$”7 )1”9 )3”: )4”; )4‘” *‘” *–” +” +” +” +”! +”" +‘” ,’” -
+” -”” .” .” .” .–” .” .” /” /” /” /˜” .” .” 0” 0” 0”& 0 ”' 0!”- 0'’” .” .’” !” !’” "” "	’” ;” ;’” <” <’” ;” ;˜” <” <” Ìë” Ìë” Ìë”- Ìë!”. Ìë"”6 Ìë*’” ;” ;˜” <” <” Ìì” Ìì” Ìì”( Ìì”) Ìì”/ Ìì#’” ;” ;–” <” <” Ìí” Ìí”  Ìí”! Ìí’” =” =–” =” =” Ìè	” Ìè” Ìè” Ìè–” =” =” Ìé	” Ìé” Ìé” Ìé’” >
+” >’” ?
+” ?’” >
+” >–” ?
+” ?” ÌV” ÌV” ÌV” ÌV’” >
+” >–” ?
+” ?” ÌW” ÌW” ÌW” ÌW’” >
+” >–” ?
+” ?” ÌX”" ÌX”# ÌX”, ÌX$’” >
+” >–” ?
+” ?” ÌY” ÌY”  ÌY”! ÌY’” >
+” >š” ?
+” ?” ÌZ” ÌZ” ÌZ” ÌZ” ÌZ”! ÌZ”# ÌZ”% ÌZ’” >
+” >—” ?
+” ?” Ì[” Ì[” Ì[” Ì[”  Ì[•” Ì\” Ì\” Ì\” Ì\” Ì\”” Ì]” Ì]” Ì]”' Ì]!“” Ì^” Ì^” Ì^”” Ì_” Ì_” Ì_”( Ì_ ‘” Ì`“” Ìa” Ìa” Ìa’” Ìb
+” Ìb˜” Ì@” Ì@” Ì@” Ì@” Ì@”$ Ì@$”& Ì@&”( Ì@(’” ÌA” ÌA–” ÌA” ÌA” ÌJ”$ ÌJ”% ÌJ”+ ÌJ–” ÌA” ÌA” ÌK”% ÌK”& ÌK”, ÌK˜” ÌA” ÌA” ÌL”- ÌL”. ÌL”7 ÌL'”8 ÌL(”> ÌL.˜” ÌA” ÌA” ÌM”) ÌM”* ÌM”9 ÌM)”: ÌM*”Ì@ ÌM0’” ÌB” ÌB–” ÌB” ÌB” ÌC”# ÌC”$ ÌC”& ÌC–” ÌB” ÌB” ÌD”$ ÌD”% ÌD”' ÌD”” ÌE” ÌE”$ ÌE”. ÌE–” ÌE” ÌE” ÌF”% ÌF”& ÌF”( ÌFš” ÌE” ÌE” ÌG”# ÌG”$ ÌG”& ÌG”) ÌG”+ ÌG!”, ÌG"”. ÌG$–” ÌE” ÌE” ÌH”& ÌH”' ÌH”0 ÌH&’” ÌE” ÌE’” ÌA” ÌA‘” ÌN‘” ÌN–” ÌO” ÌO”% ÌO”) ÌO”* ÌO”4 ÌO#–” ÌO” ÌO” ÌP”# ÌP”$ ÌP”* ÌP–” ÌO” ÌO” ÌQ”$ ÌQ”% ÌQ”( ÌQ–” ÌO” ÌO” ÌR”* ÌR”+ ÌR”, ÌR˜” ÌO” ÌO” ÌS”' ÌS”( ÌS”0 ÌS#”1 ÌS$”6 ÌS)‘” ÌT’” >
+” >’” ?
+” ?’” Ìd
+” Ìd˜” Ìe
+” Ìe” Ìe” Ìe”* Ìe!”, Ìe#”5 Ìe,”7 Ìe.’” Ìd
+” Ìd–” Ìe
+” Ìe” Ìf” Ìf” Ìf”" Ìf’” Ìd
+” Ìd–” Ìe
+” Ìe” Ìg” Ìg” Ìg” Ìg’” Ìd
+” Ìdš” Ìe
+” Ìe” Ìh” Ìh” Ìh” Ìh”" Ìh”$ Ìh”& Ìh”( Ìh’” Ìd
+” Ìd™” Ìe
+” Ìe” Ìi” Ìi” Ìi”  Ìi”% Ìi$”' Ìi&”) Ìi(—” Ìj” Ìj” Ìj” Ìj”! Ìj”& Ìj$”' Ìj$’” Ìk” Ìk“” Ìm
+” Ìm” Ìm–” Ìn” Ìn” Ìn” Ìn” Ìn”! Ìn–” Ìo” Ìo” Ìo” Ìo” Ìo”! Ìo–” Ìp” Ìp” Ìp” Ìp” Ìp”! Ìp‘” Ìq–” Ìm
+” Ìm” Ìr” Ìr” Ìr” Ìrš” Ìm
+” Ìm” Ìs” Ìs” Ìs” Ìs” Ìs”! Ìs”# Ìs”% Ìs–” Ìm
+” Ìm” Ìt” Ìt” Ìt” Ìt™” Ìm
+” Ìm” Ìu” Ìu” Ìu” Ìu”" Ìu$”$ Ìu&”& Ìu(š” Ìv” Ìv” Ìv” Ìv”! Ìv”& Ìv$”' Ìv%”/ Ìv-”1 Ìv/”2 Ìv/’” Ìw” Ìw’” Ìm
+” Ìm’” Ìy
+” Ìy”” Ìz
+” Ìz” Ìz”! Ìz’” Ìy
+” Ìy–” Ìz
+” Ìz” Ì{” Ì{” Ì{” Ì{’” Ìy
+” Ìyš” Ìz
+” Ìz” Ì|” Ì|” Ì|” Ì|” Ì|” Ì|”! Ì|”# Ì|’” Ìy
+” Ìy’” Ìz
+” Ìz“” Ì}
+” Ì}” Ì}”” Ì~” Ì~” Ì~” Ì~”” Ì” Ì” Ì” Ì”” Ì€” Ì€” Ì€” Ì€–” Ì” Ì” Ì” Ì” Ì”& Ì"‘” Ì‚–” Ì}
+” Ì}” Ìƒ” Ìƒ” Ìƒ” Ìƒ™” Ì}
+” Ì}” Ì„” Ì„” Ì„” Ì„”" Ì„$”$ Ì„&”& Ì„(—” Ì…” Ì…” Ì…” Ì…”" Ì… ”' Ì…%”( Ì…%’” Ì†” Ì†’” Ì‡
+” Ì‡–” Ì‡
+” Ì‡” Ì” Ì” Ì” Ì˜” Ì‡
+” Ì‡” Ì” Ì” Ì”( Ì#”) Ì$”5 Ì0”” Ìˆ” Ìˆ” Ìˆ” Ìˆ–” Ìˆ” Ìˆ” Ì‰” Ì‰” Ì‰” Ì‰–” Ìˆ” Ìˆ” ÌŠ” ÌŠ” ÌŠ”$ ÌŠ"’” Ìˆ” Ìˆ”” Ì‹” Ì‹” Ì‹” Ì‹–” Ì‹” Ì‹” ÌŒ” ÌŒ” ÌŒ” ÌŒ–” Ì‹” Ì‹” Ì” Ì” Ì”$ Ì"’” Ì‹” Ì‹’” Ì‡
+” Ì‡’” Ì’
+” Ì’’” Ì“
+” Ì“’” Ì’
+” Ì’–” Ì“
+” Ì“” Ì§” Ì§” Ì§” Ì§’” Ì’
+” Ì’š” Ì“
+” Ì“” Ì¨” Ì¨” Ì¨” Ì¨” Ì¨” Ì¨”  Ì¨”" Ì¨’” Ì’
+” Ì’˜” Ì“
+” Ì“” Ì©” Ì©” Ì©”( Ì©#”) Ì©$”5 Ì©0œ” Ì”” Ì”” Ì”” Ì””  Ì””" Ì””( Ì”!”* Ì”#”/ Ì”(”1 Ì”*”; Ì”4”= Ì”6–” Ì”” Ì”” Ì•” Ì•” Ì•” Ì•™” Ì”” Ì”” Ì–” Ì–” Ì–” Ì–”! Ì–'”# Ì–)”% Ì–+“” Ì—” Ì—” Ì——” Ì—” Ì—” Ì— ”* Ì—1”- Ì—4”3 Ì—:”4 Ì—:’” Ì˜” Ì˜”” Ì™” Ì™” Ì™” Ì™–” Ì™” Ì™” Ì™” Ì™!” Ì™"” Ì™$’” Ì™” Ì™œ” Ì›” Ì›” Ì›” Ì›”  Ì›”" Ì›”* Ì›#”, Ì›%”1 Ì›*”3 Ì›,”= Ì›6”? Ì›8™” Ì›” Ì›” Ìœ” Ìœ” Ìœ” Ìœ”! Ìœ'”# Ìœ)”% Ìœ+“” Ì” Ì” Ì—” Ì” Ì” Ì ”* Ì1”- Ì4”5 Ì<”6 Ì<’” Ìž” Ìž”” ÌŸ” ÌŸ” ÌŸ”  ÌŸ–” ÌŸ” ÌŸ” ÌŸ” ÌŸ#” ÌŸ$” ÌŸ&’” ÌŸ” ÌŸœ” Ì¡” Ì¡” Ì¡” Ì¡”  Ì¡”" Ì¡”( Ì¡!”* Ì¡#”/ Ì¡(”1 Ì¡*”; Ì¡4”= Ì¡6™” Ì¡” Ì¡” Ì¢” Ì¢” Ì¢” Ì¢”! Ì¢'”# Ì¢)”% Ì¢+“” Ì£” Ì£” Ì£—” Ì£” Ì£” Ì£ ”* Ì£1”- Ì£4”3 Ì£:”4 Ì£:’” Ì¤” Ì¤”” Ì¥” Ì¥” Ì¥” Ì¥–” Ì¥” Ì¥” Ì¥” Ì¥!” Ì¥"” Ì¥$’” Ì¥” Ì¥’” Ì’
+” Ì’’” Ì“
+” Ì“’” Ì«
+” Ì«’” Ì¬
+” Ì¬’” Ì«
+” Ì«–” Ì¬
+” Ì¬” ÌÀ” ÌÀ” ÌÀ” ÌÀ’” Ì«
+” Ì«š” Ì¬
+” Ì¬” ÌÁ” ÌÁ” ÌÁ” ÌÁ” ÌÁ” ÌÁ”  ÌÁ”" ÌÁ’” Ì«
+” Ì«˜” Ì¬
+” Ì¬” ÌÂ” ÌÂ” ÌÂ”( ÌÂ#”) ÌÂ$”5 ÌÂ0œ” Ì­” Ì­” Ì­” Ì­”  Ì­”" Ì­”( Ì­!”* Ì­#”/ Ì­(”1 Ì­*”8 Ì­1”: Ì­3–” Ì­” Ì­” Ì®” Ì®” Ì®” Ì®™” Ì­” Ì­” Ì¯” Ì¯” Ì¯” Ì¯”! Ì¯'”# Ì¯)”% Ì¯+“” Ì°” Ì°” Ì°—” Ì°” Ì°” Ì° ”) Ì°0”, Ì°3”2 Ì°9”3 Ì°9’” Ì±” Ì±”” Ì²” Ì²” Ì²” Ì²–” Ì²” Ì²” Ì²” Ì²!” Ì²"” Ì²$’” Ì²” Ì²œ” Ì´” Ì´” Ì´” Ì´”  Ì´”" Ì´”' Ì´ ”) Ì´"”. Ì´'”0 Ì´)”7 Ì´0”9 Ì´2™” Ì´” Ì´” Ìµ” Ìµ” Ìµ” Ìµ”! Ìµ'”# Ìµ)”% Ìµ+“” Ì¶” Ì¶” Ì¶—” Ì¶” Ì¶” Ì¶ ”) Ì¶0”, Ì¶3”1 Ì¶8”2 Ì¶8’” Ì·” Ì·”” Ì¸” Ì¸” Ì¸” Ì¸–” Ì¸” Ì¸” Ì¸” Ì¸ ” Ì¸!” Ì¸#’” Ì¸” Ì¸œ” Ìº” Ìº” Ìº” Ìº”  Ìº”" Ìº”& Ìº”( Ìº!”- Ìº&”/ Ìº(”6 Ìº/”8 Ìº1™” Ìº” Ìº” Ì»” Ì»” Ì»” Ì»”! Ì»'”# Ì»)”% Ì»+“” Ì¼” Ì¼” Ì¼—” Ì¼” Ì¼” Ì¼ ”) Ì¼0”, Ì¼3”0 Ì¼7”1 Ì¼7’” Ì½” Ì½”” Ì¾” Ì¾” Ì¾” Ì¾–” Ì¾” Ì¾” Ì¾” Ì¾” Ì¾ ” Ì¾"’” Ì¾” Ì¾’” Ì«
+” Ì«’” Ì¬
+” Ì¬’” ÌÄ
+” ÌÄ˜” ÌÅ
+” ÌÅ” ÌÅ” ÌÅ”) ÌÅ ”+ ÌÅ"”5 ÌÅ,”7 ÌÅ.’” ÌÄ
+” ÌÄ–” ÌÅ
+” ÌÅ” ÌÆ” ÌÆ” ÌÆ”! ÌÆ’” ÌÄ
+” ÌÄ–” ÌÅ
+” ÌÅ” ÌÇ” ÌÇ” ÌÇ” ÌÇ’” ÌÄ
+” ÌÄš” ÌÅ
+” ÌÅ” ÌÈ” ÌÈ” ÌÈ” ÌÈ”! ÌÈ”# ÌÈ”% ÌÈ”' ÌÈ’” ÌÄ
+” ÌÄ™” ÌÅ
+” ÌÅ” ÌÉ” ÌÉ” ÌÉ” ÌÉ”$ ÌÉ$”& ÌÉ&”( ÌÉ(—” ÌÊ” ÌÊ” ÌÊ” ÌÊ” ÌÊ”" ÌÊ ”# ÌÊ ’” ÌË” ÌË’” ÌÍ
+” ÌÍ”” ÌÎ
+” ÌÎ”# ÌÎ”) ÌÎ’” ÌÍ
+” ÌÍ–” ÌÎ
+” ÌÎ” ÌÏ” ÌÏ” ÌÏ” ÌÏ’” ÌÍ
+” ÌÍ–” ÌÎ
+” ÌÎ” ÌÐ” ÌÐ” ÌÐ” ÌÐ’” ÌÍ
+” ÌÍž” ÌÎ
+” ÌÎ” ÌÑ” ÌÑ” ÌÑ” ÌÑ” ÌÑ”! ÌÑ”# ÌÑ”% ÌÑ”+ ÌÑ%”- ÌÑ'”/ ÌÑ)”1 ÌÑ+’” ÌÍ
+” ÌÍ–” ÌÎ
+” ÌÎ” ÌÒ”" ÌÒ”# ÌÒ”, ÌÒ&’” ÌÍ
+” ÌÍ—” ÌÎ
+” ÌÎ” ÌÓ” ÌÓ” ÌÓ” ÌÓ”  ÌÓ’” ÌÔ” ÌÔ”” ÌÕ” ÌÕ” ÌÕ”! ÌÕ)œ” ÌÖ” ÌÖ” ÌÖ” ÌÖ”# ÌÖ”$ ÌÖ ”- ÌÖ)”0 ÌÖ,”4 ÌÖ0”5 ÌÖ1”ÌF ÌÖÌB”ÌJ ÌÖÌF–” Ì×” Ì×” Ì×” Ì×”  Ì×”) Ì×%” ÌØ” ÌØ” ÌØ” ÌØ”" ÌØ”& ÌØ"”* ÌØ&”, ÌØ(”- ÌØ)”5 ÌØ1”7 ÌØ3”: ÌØ6”? ÌØ;“” ÌÙ” ÌÙ”Ì‰ ÌÙ0Ÿ” ÌÚ” ÌÚ”  ÌÚ”$ ÌÚ ”% ÌÚ!”/ ÌÚ+”0 ÌÚ,”1 ÌÚ-”2 ÌÚ.”6 ÌÚ2”7 ÌÚ3”ÌA ÌÚ=”ÌB ÌÚ>”ÌC ÌÚ?”Ì³ ÌÚÌY’” ÌÛ” ÌÛ’” ÌÝ” ÌÝ”” ÌÞ” ÌÞ”" ÌÞ ”% ÌÞ1”” Ìß” Ìß” Ìß”% Ìß!’” Ìà” Ìà•” Ìâ” Ìâ” Ìâ”! Ìâ”" Ìâ ”” Ìã” Ìã” Ìã”& Ìã"”” Ìä” Ìä” Ìä”( Ìä$“” Ìå” Ìå” Ìå’” Ìæ” Ìæ’” ÌÍ
+” ÌÍ’” ÌÎ
+” ÌÎ’” =” =’” ;” ;’” <” <’”  ”  
+‘” ÌòÔrF–§version¤file§sources®sourcesContent¥names¨mappingsÀ‘À‘ÀÜã‘”    ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”  	 ‘”  
+ ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”   ‘”    ‘”  ! ‘”  " ‘”  # ‘”  $ ‘”  % ‘”  & ‘”  ' ‘”  ( ‘”  ) ‘”  * ‘”  + ‘”  , ‘”  - ‘”  . ‘”  / ‘”  0 ‘”  1 ‘”  2 ‘”  3 ‘”  4 ‘”  5 ‘”  6 ‘”  7 ‘”  8 ‘”  9 ‘”  : ‘”  ; ‘”  < ‘”  = ‘”  > ‘”  ? ‘”  Ì@ ‘”  ÌA ‘”  ÌB ‘”  ÌC ‘”  ÌD ‘”  ÌE ‘”  ÌF ‘”  ÌG ‘”  ÌH ‘”  ÌI ‘”  ÌJ ‘”  ÌK ‘”  ÌL ‘”  ÌM ‘”  ÌN ‘”  ÌO ‘”  ÌP ‘”  ÌQ ‘”  ÌR ‘”  ÌS ‘”  ÌT ‘”  ÌU ‘”  ÌV ‘”  ÌW ‘”  ÌX ‘”  ÌY ‘”  ÌZ ‘”  Ì[ ‘”  Ì\ ‘”  Ì] ‘”  Ì^ ‘”  Ì_ ‘”  Ì` ‘”  Ìa ‘”  Ìb ‘”  Ìc ‘”  Ìd ‘”  Ìe ‘”  Ìf ‘”  Ìg ‘”  Ìh ‘”  Ìi ‘”  Ìj ‘”  Ìk ‘”  Ìl ‘”  Ìm ‘”  Ìn ‘”  Ìo ‘”  Ìp ‘”  Ìq ‘”  Ìr ‘”  Ìs ‘”  Ìt ‘”  Ìu ‘”  Ìv ‘”  Ìw ‘”  Ìx ‘”  Ìy ‘”  Ìz ‘”  Ì{ ‘”  Ì| ‘”  Ì} ‘”  Ì~ ‘”  Ì ‘”  Ì€ ‘”  Ì ‘”  Ì‚ ‘”  Ìƒ ‘”  Ì„ ‘”  Ì… ‘”  Ì† ‘”  Ì‡ ‘”  Ìˆ ‘”  Ì‰ ‘”  ÌŠ ‘”  Ì‹ ‘”  ÌŒ ‘”  Ì ‘”  ÌŽ ‘”  Ì ‘”  Ì ‘”  Ì‘ ‘”  Ì’ ‘”  Ì“ ‘”  Ì” ‘”  Ì• ‘”  Ì– ‘”  Ì— ‘”  Ì˜ ‘”  Ì™ ‘”  Ìš ‘”  Ì› ‘”  Ìœ ‘”  Ì ‘”  Ìž ‘”  ÌŸ ‘”  Ì  ‘”  Ì¡ ‘”  Ì¢ ‘”  Ì£ ‘”  Ì¤ ‘”  Ì¥ ‘”  Ì¦ ‘”  Ì§ ‘”  Ì¨ ‘”  Ì© ‘”  Ìª ‘”  Ì« ‘”  Ì¬ ‘”  Ì­ ‘”  Ì® ‘”  Ì¯ ‘”  Ì° ‘”  Ì± ‘”  Ì² ‘”  Ì³ ‘”  Ì´ ‘”  Ìµ ‘”  Ì¶ ‘”  Ì· ‘”  Ì¸ ‘”  Ì¹ ‘”  Ìº ‘”  Ì» ‘”  Ì¼ ‘”  Ì½ ‘”  Ì¾ ‘”  Ì¿ ‘”  ÌÀ ‘”  ÌÁ ‘”  ÌÂ ‘”  ÌÃ ‘”  ÌÄ ‘”  ÌÅ ‘”  ÌÆ ‘”  ÌÇ ‘”  ÌÈ ‘”  ÌÉ ‘”  ÌÊ ‘”  ÌË ‘”  ÌÌ ‘”  ÌÍ ‘”  ÌÎ ‘”  ÌÏ ‘”  ÌÐ ‘”  ÌÑ ‘”  ÌÒ ‘”  ÌÓ ‘”  ÌÔ ‘”  ÌÕ ‘”  ÌÖ ‘”  Ì× ‘”  ÌØ ‘”  ÌÙ ‘”  ÌÚ ‘”  ÌÛ ‘”  ÌÜ ‘”  ÌÝ ‘”  ÌÞ ‘”  Ìß ‘”  Ìà ‘”  Ìá ‘”  Ìâ ‘”  Ìã ‘”  Ìä ‘”  Ìå ‘”  Ìæ ‘”  Ìç ‘”  Ìè ‘”  Ìé ‘”  Ìê ‘”  Ìë ‘”  Ìì ‘”  Ìí ‘”  Ìî ‘”  Ìï ‘”  Ìð ‘”  Ìñ ‘”  Ìò ‘”  Ìó ‘”  Ìô ‘”  Ìõ ‘”  Ìö ‘”  Ì÷ ‘”  Ìø ‘”  Ìù ‘”  Ìú ‘”  Ìû ‘”  Ìü ‘”  Ìý ‘”  Ìþ ‘”  Ìÿ ‘”  Í  ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í	 ‘”  Í
+ ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í ‘”  Í  ‘”  Í! ‘”  Í" ‘”  Í# ‘”  Í$ ‘”  Í% ‘”  Í& ‘”  Í' ‘”  Í( ‘”  Í) ‘”  Í* ‘”  Í+ ‘”  Í, ‘”  Í- ‘”  Í. ‘”  Í/ ‘”  Í0 ‘”  Í1 ‘”  Í2 ‘”  Í3 ‘”  Í4 ‘”  Í5 ‘”  Í6 ‘”  Í7 ‘”  Í8 ‘”  Í9 ‘”  Í: ‘”  Í; ‘”  Í< ‘”  Í= ‘”  Í> ‘”  Í? ‘”  Í@ ‘”  ÍA ‘”  ÍB ‘”  ÍC ‘”  ÍD ‘”  ÍE ‘”  ÍF ‘”  ÍG ‘”  ÍH ‘”  ÍI ‘”  ÍJ ‘”  ÍK ‘”  ÍL ‘”  ÍM ‘”  ÍN ‘”  ÍO ‘”  ÍP ‘”  ÍQ ‘”  ÍR ‘”  ÍS ‘”  ÍT ‘”  ÍU ‘”  ÍV ‘”  ÍW ‘”  ÍX ‘”  ÍY ‘”  ÍZ ‘”  Í[ ‘”  Í\ ‘”  Í] ‘”  Í^ ‘”  Í_ ‘”  Í` ‘”  Ía ‘”  Íb ‘”  Íc ‘”  Íd ‘”  Íe ‘”  Íf ‘”  Íg ‘”  Íh ‘”  Íi ‘”  Íj ‘”  Ík ‘”  Íl ‘”  Ím ‘”  Ín ‘”  Ío ‘”  Íp ‘”  Íq ‘”  Ír ‘”  Ís ‘”  Ít ‘”  Íu ‘”  Ív ‘”  Íw ‘”  Íx ‘”  Íy ‘”  Íz ‘”  Í{ ‘”  Í| ‘”  Í} ‘”  Í~ ‘”  Í ‘”  Í€ ‘”  Í ‘”  Í‚ ‘”  Íƒ ‘”  Í„ ‘”  Í… ‘”  Í† ‘”  Í‡ ‘”  Íˆ ‘”  Í‰ ‘”  ÍŠ ‘”  Í‹ ‘”  ÍŒ ‘”  Í ‘”  ÍŽ ‘”  Í ‘”  Í ‘”  Í‘ ‘”  Í’ ‘”  Í“ ‘”  Í” ‘”  Í• ‘”  Í– ‘”  Í— ‘”  Í˜ ‘”  Í™ ‘”  Íš ‘”  Í› ‘”  Íœ ‘”  Í ‘”  Íž ‘”  ÍŸ ‘”  Í  ‘”  Í¡ ‘”  Í¢ ‘”  Í£ ‘”  Í¤ ‘”  Í¥ ‘”  Í¦ ‘”  Í§ ‘”  Í¨ ‘”  Í© ‘”  Íª ‘”  Í« ‘”  Í¬ ‘”  Í­ ‘”  Í® ‘”  Í¯ ‘”  Í° ‘”  Í± ‘”  Í² ‘”  Í³ ‘”  Í´ ‘”  Íµ ‘”  Í¶ ‘”  Í· ‘”  Í¸ ‘”  Í¹ ‘”  Íº ‘”  Í» ‘”  Í¼ ‘”  Í½ ‘”  Í¾ ‘”  Í¿ ‘”  ÍÀ ‘”  ÍÁ ‘”  ÍÂ ‘”  ÍÃ ‘”  ÍÄ ‘”  ÍÅ ‘”  ÍÆ ‘”  ÍÇ ‘”  ÍÈ ‘”  ÍÉ ‘”  ÍÊ ‘”  ÍË ‘”  ÍÌ ‘”  ÍÍ ‘”  ÍÎ ‘”  ÍÏ ‘”  ÍÐ ‘”  ÍÑ ‘”  ÍÒ ‘”  ÍÓ ‘”  ÍÔ ‘”  ÍÕ ‘”  ÍÖ ‘”  Í× ‘”  ÍØ ‘”  ÍÙ ‘”  ÍÚ ‘”  ÍÛ ‘”  ÍÜ ‘”  ÍÝ ‘”  ÍÞ ‘”  Íß ‘”  Íà ‘”  Íá ‘”  Íâ ÔrG’§missing¦pluginÃ¦genAbcÂÔ  ÔrH”²dynamicImportCache¹exportAllDeclarationCache»exportNamedDeclarationCache«importCache‘ÔrI•¤type¥start£endªspecifiers¦source±ImportDeclarationÌ€Ì¢‘ÔrJ”¤type¥start£end¥local¶ImportDefaultSpecifierÌ‡ÌÔrK”¤type¥start£end¤nameªIdentifierÌ‡Ì¦routerÔrL•¤type¥start£end¥value£raw§LiteralÌ“Ì¡¬@ohos.router®'@ohos.router'

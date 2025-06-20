@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9051d5b7-6740-4a22-a3ec-66609a985ff4" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppScope/app.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppScope/resources/base/element/string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppScope/resources/base/media/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppScope/resources/base/media/foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppScope/resources/base/media/layered_image.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AppScope/resources/base/media/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build-profile.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-linter.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build-profile.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hvigorfile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obfuscation-rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oh-package.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/entryability/EntryAbility.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/entrybackupability/EntryBackupAbility.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/AIchat1.1.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/AIservice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/API_uilts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/Camera.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/Data.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/EntryAbility.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/Index.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/addPlant.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/banben.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/collect.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/faxian.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/jiaoshui.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/kefu.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/message.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/quanxian.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/renwu.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/riji.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/shense.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/shequ.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/shezhi.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/test11.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/threeD.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/userStore.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/wode.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/xiujian.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ets/pages/zhuce.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/module.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/element/color.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/element/float.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/element/string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/arrow_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/arrow_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/automation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/avatar_default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/basil.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/device.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/environment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/layered_image.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/menu_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/recommend_p1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/recommend_p2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/recommend_p3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/recommend_p4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/recommend_p5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/recommend_p6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/scissors_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/search_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/startIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/succulent.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/media/water_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/profile/backup_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/base/profile/main_pages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dark/element/color.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mock/mock-config.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ohosTest/ets/test/Ability.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ohosTest/ets/test/List.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ohosTest/module.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/List.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/LocalUnit.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hvigor/hvigor-config.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hvigorfile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oh-package-lock.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oh-package.json5" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2yci4GvC46B7pzmNQuL2POBceSk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/jt/DevEcoStudioProjects/MyApplication9new"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用级" UseSingleDictionary="true" transferred="true" />
+</project>
